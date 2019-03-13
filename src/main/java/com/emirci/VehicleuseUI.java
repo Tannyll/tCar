@@ -149,10 +149,6 @@ public class VehicleuseUI extends UI {
 
         updateList();
 
-        //Page.getCurrent().setTitle(messageSource.getMessage("page.title", new Object[]{}, Locale.getDefault()));
-
-        //setLocale(new Locale("tr", "TR"));
-        //UI.getCurrent().setLocale(new Locale("tr"));
         Page.getCurrent().setTitle(Translator.toLocale("page.title"));
 
         DefErrorHandler();

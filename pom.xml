@@ -5,7 +5,7 @@
 
     <groupId>com.emirci</groupId>
     <artifactId>tCars</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.9-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>tCars</name>
@@ -26,7 +26,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <start-class>com.emirci.IHeyoApplication</start-class>
+        <start-class>com.emirci.App</start-class>
         <hsqldb.version>2.3.4</hsqldb.version>
 
     </properties>
@@ -184,10 +184,10 @@
                 <version>2.2</version>
 
                 <configuration>
-                    <url>http://ws37.osmanlireklam.com.tr:8080/manager/text</url>
+                    <url>http://ws37.domain.com.tr:8080/manager/text</url>
                     <server>WS37</server>
                     <username>admin</username>
-                    <password>Ae25SeE8</password>
+                    <password>*****</password>
                     <path>/tcars</path>
                 </configuration>
             </plugin>

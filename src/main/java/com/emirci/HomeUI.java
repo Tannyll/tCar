@@ -11,6 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.annotation.PostConstruct;
+import javax.ejb.Local;
 import javax.servlet.annotation.WebServlet;
 import java.util.Locale;
 
@@ -38,6 +39,13 @@ public class HomeUI extends UI {
         content.setSizeFull(); // Use entire window
         setContent(content);   // Attach to the UI
 
+        Locale defaultLang = Locale.getDefault();
+        logger.warn("Lang : "+ Locale.getDefault().toString());
+        setLocale(defaultLang);
+        UI.getCurrent().setLocale(defaultLang);
+
+        getPage().setTitle(Translator.toLocale("app"));
+
         final Label selection = new Label("-");
         MenuBar menuBar = new MenuBar();
         MenuBar.MenuItem previous = null;
@@ -64,7 +72,7 @@ public class HomeUI extends UI {
             }
         };
 
-        getPage().setTitle(Translator.toLocale("app"));
+
 
         MenuBar.MenuItem prs = menuBar.addItem(Translator.toLocale("page.title"), VaadinIcons.GRID, vehicleuse);
         prs.setEnabled(true);

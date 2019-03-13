@@ -32,8 +32,7 @@ public class CustomLocaleResolver
     @Bean
     public LocaleResolver localeResolver() {
         SessionLocaleResolver slr = new SessionLocaleResolver();
-        //slr.setDefaultLocale(new Locale("tr"));//Locale.forLanguageTag("tr"));//
-//      slr.setDefaultLocale(Locale.forLanguageTag("tr"));
+        slr.setDefaultLocale(Locale.forLanguageTag("tr-TR"));
         return slr;
     }
 
